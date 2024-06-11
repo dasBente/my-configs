@@ -1,6 +1,6 @@
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  ensure_installed = { 
+  ensure_installed = {
     "c", "lua", "vim", "vimdoc", "query", "rust", "javascript", "typescript", "python",
     "svelte"
   },
@@ -26,4 +26,4 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
-vim.treesitter.language.register("python", { "rpy" })
+vim.treesitter.language.register("python", "rpy")
