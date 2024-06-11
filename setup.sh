@@ -18,7 +18,7 @@ ln -fs "$(pwd)/scripts" "$HOME/.local/scripts"
 # move to dotfiles location
 cd $(dirname "$0")
 
-ln -fs .tmux.conf "$HOME/"
+ln -fs "$(pwd)/dotfiles/.tmux.conf" ~
 
 # NVIM ########################################################################
 ln -fs "$(pwd)/nvim" ~/.config/
