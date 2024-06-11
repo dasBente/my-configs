@@ -58,6 +58,25 @@ require("lazy").setup({
     {
 	"nvim-telescope/telescope.nvim",
 	tag = "0.1.5",
-	require = { "nvim-lua/plenary.nvim", }
+	dependencies = { "nvim-lua/plenary.nvim", "Snikimonkd/telescope-git-conflicts.nvim" },
+	config = function()
+	    require("telescope").setup({})
+	    require("telescope").load_extension("conflicts")
+	end,
     },
+    {
+	"debugloop/telescope-undo.nvim",
+	require = {
+	    "nvim-telescope/telescope.nvim",
+	},
+	keys = {
+	    { "<leader>fu", "<cmd>Telescope undo<cr>", desc = "undo history" }
+	},
+	opts = { undo = {}, }, -- https://github.com/debugloop/telescope-undo.nvim?tab=readme-ov-file#configuration
+	config = function(_, opts)
+	    require("telescope").setup(opts)
+	    require("telescope").load_extension("undo")
+	end,
+    },
+    "tpope/vim-fugitive"
 })
