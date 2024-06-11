@@ -33,6 +33,7 @@ vim.keymap.set("n", "Q", "<nop>")
 
 -- swap quickly between tmux sessions
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<leader>rf", vim.lsp.buf.format)
 
 -- search and replace current word
 vim.keymap.set(
