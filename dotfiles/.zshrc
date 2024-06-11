@@ -15,6 +15,9 @@ ZSH_THEME="avit"
 # tmux sessionizer macro
 bindkey -s ^f "tmux-sessionizer\n"  
 
+export EDITOR=nvim
+export VISUAL="$EDITOR"
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
