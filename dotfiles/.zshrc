@@ -18,7 +18,11 @@ bindkey -s ^f "tmux-sessionizer\n"
 export EDITOR=nvim
 export VISUAL="$EDITOR"
 
-alias npm=pnpm
+# alias npm=pnpm
+
+if ! command -v python &> /dev/null; then 
+	alias python=python3
+fi
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
