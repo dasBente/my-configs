@@ -24,3 +24,8 @@ ln -fs "$(pwd)/i3" ~/.config/
 # NVIM ########################################################################
 ln -fs "$(pwd)/nvim" ~/.config/
 
+# SETUP #######################################################################
+
+mkdir -p "$HOME/.npm-global"
+npm config set prefix "$HOME/.npm-global"
+
