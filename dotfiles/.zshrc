@@ -24,6 +24,16 @@ if ! command -v python &> /dev/null; then
 	alias python=python3
 fi
 
+plugins=(git zsh-autosuggestions z node npm aliases)
+
+source $ZSH/oh-my-zsh.sh
+
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+	*":$PNPM_HOME:"*) ;;
+	*) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -84,9 +94,6 @@ fi
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions z node npm aliases)
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -113,3 +120,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# pnpm
+# pnpm end
