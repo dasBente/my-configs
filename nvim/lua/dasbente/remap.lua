@@ -46,3 +46,12 @@ vim.keymap.set(
 	"n", "<leader>x", "<cmd>!chmod +x %<CR>",
 	{ silent = true, desc = "chmod +x" }
 )
+
+-- unbind conventional navigation, force vim motions.
+local unbind_keys = {
+	"<Up>", "<Left>", "<Right>", "<Down>", "<PageUp>", "<PageDown>"
+}
+
+for i = 1, #unbind_keys do
+	vim.keymap.set({"n", "x", "v", "i"}, unbind_keys[i], "<Nop>")
+end
