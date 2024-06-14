@@ -57,7 +57,7 @@ lsp.on_attach(function(_, bufnr)
 		function() vim.lsp.buf.references() end,
 		{ buffer = bufnr, desc = "References" })
 
-	vim.keymap.set("n", "<leader>vrn",
+	vim.keymap.set("n", "<leader>vr",
 		function() vim.lsp.buf.rename() end,
 		{ buffer = bufnr })
 
