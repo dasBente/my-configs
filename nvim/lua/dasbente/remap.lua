@@ -47,6 +47,17 @@ vim.keymap.set(
 	{ silent = true, desc = "chmod +x" }
 )
 
+-- buffer shortcuts
+vim.keymap.set(
+	"n", "<C-w>v", ":vnew<CR>",
+	{ desc = "New Window (vertical)" }
+)
+
+vim.keymap.set(
+	"n", "<C-w>e", ":enew<CR>",
+	{ desc = "New Window (full)" }
+)
+
 -- unbind conventional navigation, force vim motions.
 local unbind_keys = {
 	"<Up>", "<Left>", "<Right>", "<Down>", "<PageUp>", "<PageDown>"
@@ -55,3 +66,4 @@ local unbind_keys = {
 for i = 1, #unbind_keys do
 	vim.keymap.set({"n", "x", "v", "i"}, unbind_keys[i], "<Nop>")
 end
+
