@@ -66,9 +66,6 @@ require("lazy").setup({
 	},
 	{
 		"debugloop/telescope-undo.nvim",
-		require = {
-			"nvim-telescope/telescope.nvim",
-		},
 		keys = {
 			{ "<leader>fu", "<cmd>Telescope undo<cr>", desc = "undo history" }
 		},
