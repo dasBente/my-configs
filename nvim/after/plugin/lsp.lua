@@ -27,39 +27,31 @@ lsp.on_attach(function(_, bufnr)
 
 	vim.keymap.set("n", "gd",
 		function() vim.lsp.buf.definition() end,
-		{ buffer = bufnr, desc = "Definition" })
+		{ buffer = bufnr, desc = "Go to Definition" })
 
 	vim.keymap.set("n", "K",
 		function() vim.lsp.buf.hover() end,
 		{ buffer = bufnr })
 
-	vim.keymap.set("n", "<leader>vw",
-		function() vim.lsp.buf.workspace_symbol() end,
-		{ buffer = bufnr, desc = "Workspace Symbols" })
-
 	vim.keymap.set("n", "<leader>vd",
 		function() vim.diagnostic.open_float() end,
 		{ buffer = bufnr, desc = "Diagnostic" })
 
-	vim.keymap.set("n", "[d",
+	vim.keymap.set("n", "<leader>vj",
 		function() vim.diagnostic.goto_next() end,
 		{ buffer = bufnr, desc = "Next Diagnostic" })
 
-	vim.keymap.set("n", "]d",
+	vim.keymap.set("n", "<leader>vk",
 		function() vim.diagnostic.goto_prev() end,
 		{ buffer = bufnr, desc = "Prev Diagnostic" })
 
-	vim.keymap.set("n", "<leader>vc",
+	vim.keymap.set("n", "<leader>va",
 		function() vim.lsp.buf.code_action() end,
 		{ buffer = bufnr, desc = "Code Action" })
 
-	vim.keymap.set("n", "<leader>vv",
-		function() vim.lsp.buf.references() end,
-		{ buffer = bufnr, desc = "References" })
-
 	vim.keymap.set("n", "<leader>vr",
 		function() vim.lsp.buf.rename() end,
-		{ buffer = bufnr })
+		{ buffer = bufnr, desc = "Rename" })
 
 	vim.keymap.set("i", "<C-h>",
 		function() vim.lsp.buf.signature_help() end,
