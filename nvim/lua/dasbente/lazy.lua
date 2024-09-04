@@ -106,4 +106,7 @@ require("lazy").setup({
 			require("telescope").load_extension("git_diffs")
 		end
 	},
+	{
+		"joeveiga/ng.nvim"
+	},
 })
