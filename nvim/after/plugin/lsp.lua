@@ -33,17 +33,17 @@ lsp.on_attach(function(_, bufnr)
 		function() vim.lsp.buf.hover() end,
 		{ buffer = bufnr })
 
-	vim.keymap.set("n", "<leader>vd",
+	vim.keymap.set("n", "<leader>dd",
 		function() vim.diagnostic.open_float() end,
-		{ buffer = bufnr, desc = "Diagnostic" })
+		{ buffer = bufnr, desc = "Show Diagnostic" })
 
-	vim.keymap.set("n", "<leader>vj",
+	vim.keymap.set("n", "<leader>dj",
 		function() vim.diagnostic.goto_next() end,
-		{ buffer = bufnr, desc = "Next Diagnostic" })
+		{ buffer = bufnr, desc = "Next" })
 
-	vim.keymap.set("n", "<leader>vk",
+	vim.keymap.set("n", "<leader>dk",
 		function() vim.diagnostic.goto_prev() end,
-		{ buffer = bufnr, desc = "Prev Diagnostic" })
+		{ buffer = bufnr, desc = "Previous" })
 
 	vim.keymap.set("n", "<leader>va",
 		function() vim.lsp.buf.code_action() end,
