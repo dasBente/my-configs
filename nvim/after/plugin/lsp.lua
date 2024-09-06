@@ -29,7 +29,7 @@ lsp.on_attach(function(_, bufnr)
 		function() vim.lsp.buf.definition() end,
 		{ buffer = bufnr, desc = "Go to Definition" })
 
-	vim.keymap.set("n", "K",
+	vim.keymap.set("n", "Q",
 		function() vim.lsp.buf.hover() end,
 		{ buffer = bufnr })
 
