@@ -29,7 +29,7 @@ lsp.on_attach(function(_, bufnr)
 		function() vim.lsp.buf.definition() end,
 		{ buffer = bufnr, desc = "Go to Definition" })
 
-	vim.keymap.set("n", "Q",
+	vim.keymap.set("n", "K",
 		function() vim.lsp.buf.hover() end,
 		{ buffer = bufnr })
 
@@ -66,6 +66,7 @@ require("mason-lspconfig").setup({
 		"lua_ls",
 		"rust_analyzer",
 		"pyright",
+		"bashls",
 	},
 	handlers = {
 		function(server_name)
