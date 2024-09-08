@@ -64,6 +64,6 @@ local unbind_keys = {
 }
 
 for i = 1, #unbind_keys do
-	vim.keymap.set({"n", "x", "v", "i"}, unbind_keys[i], "<Nop>")
+	vim.keymap.set({"n", "x", "v"}, unbind_keys[i], "<Nop>")
 end
 
