@@ -33,6 +33,10 @@ lsp.on_attach(function(_, bufnr)
 		function() vim.lsp.buf.hover() end,
 		{ buffer = bufnr })
 
+	vim.keymap.set("i", "<C-k>",
+		function() vim.lsp.buf.hover() end,
+		{ buffer = bufnr })
+
 	vim.keymap.set("n", "<leader>dd",
 		function() vim.diagnostic.open_float() end,
 		{ buffer = bufnr, desc = "Show Diagnostic" })
