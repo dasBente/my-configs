@@ -51,22 +51,22 @@ require("lazy").setup({
 		"hrsh7th/nvim-cmp",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
-			"luckasRanarison/tailwind-tools.nvim",
+			-- "luckasRanarison/tailwind-tools.nvim",
 			"onsails/lspkind-nvim"
 		},
 		config = function()
 			require("cmp")
 			vim.opt.completeopt = { "menu", "menuone", "noselect" }
 		end,
-		opts = function ()
-			return {
-				formatting = {
-					format = require("lspkind").cmp_format({
-						before = require("tailwind-tools.cmp").lspkind_format
-					}),
-				}
-			}
-		end,
+		-- opts = function ()
+		-- 	return {
+		-- 		formatting = {
+		-- 			format = require("lspkind").cmp_format({
+		-- 				before = require("tailwind-tools.cmp").lspkind_format
+		-- 			}),
+		-- 		}
+		-- 	}
+		-- end,
 	},
 	{
 		"nvim-telescope/telescope.nvim",
@@ -122,16 +122,16 @@ require("lazy").setup({
 	{
 		"joeveiga/ng.nvim"
 	},
-	{
-		"luckasRanarison/tailwind-tools.nvim",
-		name = "tailwind-tools",
-		build = ":UpdateRemotePlugins",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-			"nvim-telescope/telescope.nvim",
-			"neovim/nvim-lspconfig",
-		},
-		opts = {}
-	},
+	-- {
+	-- 	"luckasRanarison/tailwind-tools.nvim",
+	-- 	name = "tailwind-tools",
+	-- 	build = ":UpdateRemotePlugins",
+	-- 	dependencies = {
+	-- 		"nvim-treesitter/nvim-treesitter",
+	-- 		"nvim-telescope/telescope.nvim",
+	-- 		"neovim/nvim-lspconfig",
+	-- 	},
+	-- 	opts = {}
+	-- },
 	{ 'echasnovski/mini.nvim', version = false },
 })

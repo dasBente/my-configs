@@ -22,7 +22,7 @@
   "nvim-treesitter": { "branch": "master", "commit": "6511cd984ab4b21e28f83af488f38dc89c3b0586" },
   "nvim-web-devicons": { "branch": "master", "commit": "26220156aafb198b2de6a4cf80c1b120a3768da0" },
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
-  "tailwind-tools": { "branch": "master", "commit": "82904184e302746c7933b2b3942169f63f678a69" },
+  "tailwind-tools.nvim": { "branch": "master", "commit": "82904184e302746c7933b2b3942169f63f678a69" },
   "telescope-git-conflicts.nvim": { "branch": "main", "commit": "1ac7040f601d16ab3800bdda6f5912a0e385cb29" },
   "telescope-git-diffs.nvim": { "branch": "main", "commit": "366df26227e6d478d5c55e04771d61875c4f22ac" },
   "telescope-undo.nvim": { "branch": "main", "commit": "51be9ae7c42fc27c0b05505e3a0162e0f05fbb6a" },
