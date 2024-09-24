@@ -87,10 +87,35 @@ require("lspconfig").lua_ls.setup({
 	settings = {
 		Lua = {
 			diagnostics = {
-				globals = {"vim", "buffer"}
+				globals = { "vim", "buffer" }
 			}
 		}
 	}
 })
 
-require"lspconfig".svelte.setup{}
+require "lspconfig".svelte.setup {}
+
+require "lspconfig".tailwindcss.setup({
+	settings = {
+		tailwindCSS = {
+			classAttributes = { "class", "className", "class:list", "classList", "ngClass" },
+			includeLanguages = {
+				eelixir = "html-eex",
+				eruby = "erb",
+				htmlangular = "html",
+				templ = "html",
+				svelte = "svelte"
+			},
+			lint = {
+				cssConflict = "warning",
+				invalidApply = "error",
+				invalidConfigPath = "error",
+				invalidScreen = "error",
+				invalidTailwindDirective = "error",
+				invalidVariant = "error",
+				recommendedVariantOrder = "warning"
+			},
+			validate = true
+		}
+	}
+})
