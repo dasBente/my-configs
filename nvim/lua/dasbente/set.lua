@@ -28,3 +28,8 @@ vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
 
+vim.filetype.add({
+	extension = {
+		postcss = "css",
+	}
+})
