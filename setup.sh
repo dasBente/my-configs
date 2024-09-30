@@ -29,3 +29,4 @@ ln -fs "$(pwd)/nvim" ~/.config/
 mkdir -p "$HOME/.npm-global"
 npm config set prefix "$HOME/.npm-global"
 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash

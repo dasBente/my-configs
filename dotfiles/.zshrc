@@ -147,3 +147,5 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 alias vpn='sudo openvpn $(find /etc/openvpn/*.conf | fzf)'
+
+export PATH="$PATH:/opt/nvim-linux64/bin"
