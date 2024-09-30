@@ -73,6 +73,7 @@ require("mason-lspconfig").setup({
 		"pyright",
 		"bashls",
 		"tailwindcss",
+		"csharp_ls",
 	},
 	handlers = {
 		function(server_name)
@@ -94,6 +95,7 @@ require("lspconfig").lua_ls.setup({
 })
 
 require "lspconfig".svelte.setup {}
+require "lspconfig".csharp_ls.setup {}
 
 require "lspconfig".tailwindcss.setup({
 	settings = {
