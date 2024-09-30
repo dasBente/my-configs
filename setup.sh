@@ -20,6 +20,7 @@ cd $(dirname "$0")
 
 ln -fs "$(pwd)/dotfiles/.tmux.conf" ~
 ln -fs "$(pwd)/i3" ~/.config/
+ln -fs "$(pwd)/dotfiles/ssh-config" "$HOME/.ssh/config"
 
 # NVIM ########################################################################
 ln -fs "$(pwd)/nvim" ~/.config/

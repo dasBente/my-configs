@@ -1,0 +1,4 @@
+Host dasbente.moe
+	HostName git.dasbente.moe
+	User git
+	Port 222
