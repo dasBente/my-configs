@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/dasbente/.zsh/completions:"* ]]; then export FPATH="/home/dasbente/.zsh/completions:$FPATH"; fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -151,3 +153,7 @@ alias vpn='sudo openvpn $(find /etc/openvpn/*.conf | fzf)'
 export PATH="$PATH:/opt/nvim-linux64/bin:$HOME/scripts"
 alias npm=pnpm
 
+. "/home/dasbente/.deno/env"
+# Initialize zsh completions (added by deno install script)
+autoload -Uz compinit
+compinit
